@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <button id="fetch-data-btn" type="submit">Generate Character</button>
+        <div class="box">
+            <h1>Name : <span id="name"></span></h1>
+            <img id="img" src="" alt="">
+
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('#fetch-data-btn').on("click", function () {
+                let randomNumber = Math.ceil(Math.random() * 88);
+                console.log(randomNumber);
+                $.get(`https://akabab.github.io/starwars-api/api/id/${randomNumber}.json`, function (data) {
+                    console.log(data);
+                    $('#name').text(data['name'])
+                    $('#img').attr('src', data['image'])
+
+                })
+            })
+
+        })
+    </script>
+</body>
+
+</html>
