@@ -2,7 +2,7 @@ import requests
 
 while True:
     # info: Ask for user input
-    pokemon = input("Which pokemon do you want to find");
+    pokemon = input("Which pokemon do you want to find: ");
     pokemon = pokemon.lower();
 
     # info: Create a dynamic URl based on Step1
