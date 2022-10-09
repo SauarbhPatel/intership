@@ -1,0 +1,4 @@
+Deposited 10.0 			 balance : 60.5 
+Withdraw 14.75 			 balance : 45.75 
+Deposited 100.0 			 balance : 150.5 
+Withdraw 10.0 			 balance : 40.5 
